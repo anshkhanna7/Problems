@@ -4,10 +4,10 @@ import nltk
 from sklearn.cluster import KMeans
 import numpy as np
 
-consumer_key = "4BC9yJWYekhi5XaqzaCXs1g1y"
-consumer_secret = "Z6qTU9J5gHfJ7cn31M17qNMoHFuvd3VAjPuCLCOCRsANKva5Iw"
-access_token = "1722517680-cyhUqcDoMzISda38kCj6yhc2WIOCLejmdyRMvvW"
-access_token_secret = "EEbUCmilOIoIVkBfU5Tv2I9e6Ke7RM1Ni6FgfiOJPmS3t"
+consumer_key = "consumer_key"
+consumer_secret = "consumer_secret"
+access_token = "access_token"
+access_token_secret = "access_token_secret"
 auth = tweepy.OAuthHandler(consumer_key,consumer_secret)
 auth.set_access_token(access_token,access_token_secret)
 api = tweepy.API(auth)
