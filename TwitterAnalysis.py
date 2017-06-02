@@ -12,10 +12,10 @@ auth = tweepy.OAuthHandler(consumer_key,consumer_secret)
 auth.set_access_token(access_token,access_token_secret)
 api = tweepy.API(auth)
 
-following = api.friends(screen_name = 'katyperry',count = 50);
+following = api.friends(screen_name = 'katyperry',count = 50); #extract 50 following accounts
 mean_var = []
 for user in following:
-	tweets = api.user_timeline(screen_name = user.screen_name,count=100);
+	tweets = api.user_timeline(screen_name = user.screen_name,count=100); #extract 100 tweets
 	words = 0 
 	tweetlen = len(tweets)
 	for tweet in tweets:
@@ -32,7 +32,7 @@ for user in following:
 
 mean_var = np.array(mean_var)
 
-Clustering = KMeans(n_clusters =4)
+Clustering = KMeans(n_clusters =4) #use kmeans for clustering
 Clustering.fit(mean_var)
 
 print Clustering.labels_
