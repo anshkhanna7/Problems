@@ -49,7 +49,7 @@ def spellcheck(dictionary,query):
 	#check for extra character
 	for i in range(qlen):
 		newstr  = query[:i]+query[i+1:]
-		addToResult(temp2,result,dictionary)
+		addToResult(newstr,result,dictionary)
 
 	#check for misspelt character
 	for i in range(qlen):
@@ -64,6 +64,6 @@ def spellcheck(dictionary,query):
 	qrylst = addLetter(qrylst,letters,dictionary,result)#	for second character additon
 	return result
 
-finans = spellcheck(["also","bitter","low","peter","perte","goosebumps"],"gosbumps")
+finans = spellcheck(["also","bitter","low","peter","perte","goosebumps","goosebump"],"goosebumps")
 for w in finans:
 	print w,
