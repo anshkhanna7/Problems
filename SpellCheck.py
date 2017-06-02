@@ -9,7 +9,7 @@ def addToResult(value,result,dictionary): 		#if a valid value in dictionary add 
 def addLetter(query,letters,dictionary,result):		# generates valid combinations after addition of letters
 	curlist = []
 	for qry in query:
-		for i in range(len(qry)):
+		for i in range(len(qry)+1):
 			for c in letters:
 				newstr = qry[:i] + c + qry[i:]
 				addToResult(newstr,result,dictionary)
@@ -64,6 +64,6 @@ def spellcheck(dictionary,query):
 	qrylst = addLetter(qrylst,letters,dictionary,result)#	for second character additon
 	return result
 
-finans = spellcheck(["also","bitter","low","peter","perte","goosebumps","goosebump"],"goosebumps")
+finans = spellcheck(["alsos","alsose","low","peter","perte","goosebumps","goosebump","eaelso"],"also")
 for w in finans:
 	print w,
