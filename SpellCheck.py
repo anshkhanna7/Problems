@@ -1,12 +1,12 @@
 from sortedcontainers import SortedSet
-def addToResult(value,result,dictionary):
+def addToResult(value,result,dictionary): 		#if a valid value in dictionary add to the possibilities
 	if(value in result):
 		return
 	else:
 		if(value in dictionary):
 			result.add(value)
 
-def addLetter(query,letters,dictionary,result):
+def addLetter(query,letters,dictionary,result):		# generates valid combinations after addition of letters
 	curlist = []
 	for qry in query:
 		for i in range(len(qry)):
@@ -18,9 +18,9 @@ def addLetter(query,letters,dictionary,result):
 
 def spellcheck(dictionary,query):
 
-	dictionary = [w.lower() for w in dictionary] # make case insensitve
+	dictionary = [w.lower() for w in dictionary] # make case insensitve 
 	query = query.lower() 
-	letters = "abcdefghijklmnopqrstuvwxyz"
+	letters = "abcdefghijklmnopqrstuvwxyz"	
 	qlen = len(query) #length of the query
 	dictlen = len(dictionary) #length of dictionary
 	
